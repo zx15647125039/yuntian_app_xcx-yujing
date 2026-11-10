@@ -1,0 +1,79 @@
+{
+  "easycom": {
+    "^tn-(.*)": "@/tuniao-ui/components/tn-$1/tn-$1.vue"
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "观天下",
+        "navigationStyle": "custom",
+        "enableSwipeBack": true
+      }
+    },
+    {
+      "path": "pages/report/form",
+      "style": {
+        "navigationBarTitleText": "隐患上报",
+        "navigationStyle": "custom",
+        "enableSwipeBack": false
+      }
+    },
+    {
+      "path": "pages/report/mapPicker",
+      "style": {
+        "navigationBarTitleText": "巡检范围标记",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/report/doodle",
+      "style": {
+        "navigationBarTitleText": "图片涂鸦标记",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/order/list",
+      "style": {
+        "navigationBarTitleText": "工单派发",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/order/detail",
+      "style": {
+        "navigationBarTitleText": "工单详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/order/handle",
+      "style": {
+        "navigationBarTitleText": "查看工单",
+        "navigationStyle": "custom",
+        "enableSwipeBack": false
+      }
+    },
+    {
+      "path": "pages/order/dispatchedDetail",
+      "style": {
+        "navigationBarTitleText": "工单追踪",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/user",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "观天下-派单",
+    "navigationBarBackgroundColor": "#F5F7FA",
+    "backgroundColor": "#F5F7FA"
+  }
+}

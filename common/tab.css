@@ -1,0 +1,98 @@
+.tabbar {
+    flex-direction: row;
+}
+
+.tab-active {
+    height: 100px;
+    width: 150px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tab-slide {
+    height: 5px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #01b2b6;
+
+}
+
+.tab {
+    height: 120px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.2s ease-in-out;
+}
+
+.tab-title {
+    font-size: 30px;
+}
+
+.tab-checked {
+    color: #01b2b6;
+}
+
+.tab-panels {
+    position: relative;
+    width: 700px;
+    flex: 1;
+    transition: left 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.tab-frame {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.tab-content {
+    font-size: 35px;
+    color: #ffffff;
+    background-color: #01b2b6;
+    border-color: #01b2b6;
+    border-width: 3px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tab-content-checked {
+    font-size: 35px;
+    color: #01b2b6;
+    border-color: #01b2b6;
+    border-width: 3px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.tab-image-checked {
+    width: 30px;
+    height: 30px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+}

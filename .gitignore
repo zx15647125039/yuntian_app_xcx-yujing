@@ -1,0 +1,11 @@
+node_modules/
+unpackage/
+.idea/
+.vscode/
+*.log
+*.keystore
+package-lock.json
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp

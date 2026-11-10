@@ -1,0 +1,179 @@
+{
+    "name" : "观天下-派单与隐患上报",
+    "appid" : "__UNI__F0BDA6F",
+    "description" : "观天下小程序派单与隐患上报闭环系统：包含调度首页、隐患上报、地图选点、图片涂鸦标注、工单派发中心、高德/奥维多源导航与现场处置前后对比闭环流转。",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Record" : {},
+            "VideoPlayer" : {},
+            "Barcode" : {},
+            "Bluetooth" : {},
+            "Camera" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ],
+                "permissionPhoneState" : {
+                    "request" : "none",
+                    "prompt" : "为保证您正常、安全地使用，需要获取设备识别码（部分手机提示为获取手机号码）使用权限，请允许。"
+                },
+                "permissionExternalStorage" : {
+                    "request" : "none",
+                    "prompt" : "应用保存运行状态等信息，需要获取读写手机存储（系统提示为访问设备上的照片、媒体内容和文件）权限，请您允许。"
+                },
+                "targetSdkVersion" : 30,
+                "minSdkVersion" : 21
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "dSYMs" : false,
+                "privacyDescription" : {
+                    "NSMicrophoneUsageDescription" : "App需要访问您的麦克风，以便更好地语音聊天",
+                    "NSCameraUsageDescription" : "用于拍照、录制视频场景下的校验",
+                    "NSPhotoLibraryAddUsageDescription" : "请允许访问所有照片，以便更自由地制作、上传、下载、分享、识别内容",
+                    "NSPhotoLibraryUsageDescription" : "请允许访问所有照片，以便更自由地制作、上传、下载、分享、识别内容"
+                },
+                "idfa" : false
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : true,
+                        "vivo" : {}
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : true
+            }
+        }
+    },
+    "privacy" : {
+        "prompt" : "template",
+        "template" : {
+            "title" : "服务协议和隐私政策",
+            "message" : "　　请你务必审慎阅读、充分理解“隐私政策”各条款，包括但不限于：为了更好的向你提供服务，我们需要收集你的设备标识、操作日志等信息用于分析、优化应用性能。<br/>　　你可阅读<a href=\"http://8.130.145.40:9999/file/mgzy1/ys/privacy.html\" target=\"_blank\">《隐私政策》</a>了解详细信息。如果你同意，请点击下面按钮开始接受我们的服务。",
+            "buttonAccept" : "同意",
+            "buttonRefuse" : "暂不同意",
+            "second" : {
+                "title" : "温馨提示",
+                "message" : "　　进入应用前，你需先同意<a href=\"http://8.130.145.40:9999/file/mgzy1/ys/privacy.html\" target=\"_blank\">《隐私政策》</a>，否则将退出应用。",
+                "buttonAccept" : "同意并继续",
+                "buttonRefuse" : "退出应用"
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx0485359fffbe84b6",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true,
+            "minified" : true
+        },
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : true
+        },
+        /* --- 新增：允许跳转的小程序列表 --- */
+        "navigateToMiniProgramAppIdList" : [ "wx6688c2635957d079" ],
+        "plugins" : {
+            "WechatSI" : {
+                "version" : "0.3.6",
+                "provider" : "wx069ba97219f66d99"
+            }
+        },
+        /* --- 原有的地理位置权限声明 --- */
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "您的位置信息将用于核实考勤打卡的准确性"
+            }
+        },
+        /* --- 原有的接口注册 --- */
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "2"
+}

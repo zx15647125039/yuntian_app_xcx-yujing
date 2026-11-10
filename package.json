@@ -1,0 +1,30 @@
+{
+  "name": "GuanTianXia-Dispatch",
+  "version": "1.1.0",
+  "description": "观天下小程序-派单与隐患上报闭环系统",
+  "main": "main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "build": "node build-weixin.js",
+    "start": "node build-weixin.js",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "build:mp-weixin": "node build-weixin.js",
+    "lint": "node --check build-weixin.js"
+  },
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.5.7",
+    "base-64": "^1.0.0",
+    "crypto-js": "^4.2.0",
+    "express": "^5.3.0",
+    "vue": "^2.7.16",
+    "vuex": "^3.2.0",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.28",
+    "@dcloudio/uni-cli-shared": "^2.0.2-4080720251210002",
+    "@dcloudio/uni-mp-weixin": "^2.0.2-4080720251210002",
+    "cross-env": "^10.1.0",
+    "js-md5": "^0.8.3"
+  }
+}
